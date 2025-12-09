@@ -1,11 +1,137 @@
-@import 'tailwindcss';
+/* --------------------------------------------- */
+/*                Rental Booking CSS            */
+/* --------------------------------------------- */
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+/* General container */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+}
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+/* Left section (selections) */
+.left-section {
+    background-color: #ffc0cb;
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+}
+
+.left-section h2 {
+    margin-bottom: 15px;
+}
+
+.selections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.selection-item {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+}
+
+.selection-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.selection-item p {
+    margin: 5px 0;
+}
+
+.selection-item .selected {
+    color: green;
+    font-weight: bold;
+}
+
+/* Right section (form) */
+.right-section {
+    background-color: #ffc0cb;
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #800040;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 300px;
+    max-height: 550px;
+}
+
+.right-section h2 {
+    margin-top: 0;
+}
+
+.right-section label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.right-section input,
+.right-section textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 3px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+.rental-choice button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#packageBtn {
+    background: #800040;
+    color: white;
+}
+
+#soloBtn {
+    background: #ccc;
+    color: #000;
+}
+
+.rental-choice button.active {
+    background: #800040;
+    color: white;
+}
+
+.confirm-btn {
+    background: #7ac74f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 15px;
+}
+
+/* Select button inside items */
+.select-item {
+    background: #800040;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
